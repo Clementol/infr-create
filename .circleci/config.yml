@@ -30,6 +30,8 @@ jobs:
           name: Run Playbook and Configure server
           command:  |
             ansible-playbook -i inventory main-remote.yml
+          responses:
+            'are you sure you want to continue connecting (yes/no)?': 'yes'
 workflows:
   infr-workflow:
     jobs:
