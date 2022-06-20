@@ -28,10 +28,11 @@ jobs:
             apk add --update ansible
       - run:
           name: Run Playbook and Configure server
-          command:  |
-            ansible-playbook -i inventory main-remote.yml
-          responses:
-            'are you sure you want to continue connecting (yes/no)?': 'yes'
+          expect:
+            command:  |
+              ansible-playbook -i inventory main-remote.yml
+            responses:
+              'are you sure you want to continue connecting (yes/no)?': 'yes'
 workflows:
   infr-workflow:
     jobs:
