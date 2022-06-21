@@ -48,7 +48,6 @@ jobs:
           name: Test job
           command: return 1
       - destroy_environment
-          when: on_fail
 workflows:
   smoke-test-workflow:
     jobs:
