@@ -93,7 +93,7 @@ jobs:
               --stack-name production-distro \
               --parameter-overrides PipelineID="mybucket-${CIRCLE_WORKFLOW_ID:0:7}"
 
-  # Destroy the previous production version's S3 bucket and CloudFormation stack.
+  #Destroy the previous production version's S3 bucket and CloudFormation stack.
   clean_up_old_front_end:
     docker:
       - image: amazon/aws-cli
